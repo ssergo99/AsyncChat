@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Набор вспомогательных скриптов клиентов &#8212; документация AcyncChatProject 1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Набор вспомогательных скриптов сервера" href="servsidescripts.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Набор вспомогательных скриптов клиентов<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Набор скриптов, использующихся для работы клиентской части проекта.</p>
+<section id="client-side-py">
+<h2>client_side.py<a class="headerlink" href="#client-side-py" title="Permalink to this heading">¶</a></h2>
+<p>Запускаемый модуль,содержит функционал инициализации и работы клиентской части.</p>
+<dl class="simple">
+<dt>client_side. <strong>parsing_cl_arguments</strong> ()</dt><dd><p>Парсер аргументов командной строки, возвращает кортеж из 2 элементов:</p>
+<ul class="simple">
+<li><p>адрес подключения к серверу</p></li>
+<li><p>порт подключения к серверу</p></li>
+</ul>
+</dd>
+<dt>client_side. <strong>main_start</strong> ()</dt><dd><dl class="simple">
+<dt>Основная функция, запускающая клиента:</dt><dd><p>запускающая графическую оболочку регистрации и авторизации клиента
+запускающая графическую оболочку обмена сообщениями в чате
+создания объекта класса Client</p>
+</dd>
+</dl>
+</dd>
+<dt>client_side. <strong>start_socket</strong> (server_address, server_port)</dt><dd><p>Функция, создающая сокет подключения к серверу и возвращающая данный сокет в качестве результата.</p>
+</dd>
+<dt>client_side. <strong>ans_from_users</strong> (message)</dt><dd><p>Функция проверки сообщения клиента и вывода результата в консоль.
+Формат входных данных - словарь.
+Основная задача: на основании комбинации ключей и значений
+определить тип и назначение сообщения и вывести соответствующий тип сообщения в консоль.</p>
+</dd>
+<dt>client_side. <strong>rcv_messages_from_chat</strong> (from_chat_sock, db_cl, cl)</dt><dd><p>Функция проверки сообщения на сокете и формирования сигнала для графического интерфейса
+о получении нового сообщения.</p>
+</dd>
+<dt>client_side. <strong>send_messages_to_chat</strong> (to_chat_sock, username, cl_db_1)</dt><dd><p>Функция отправки сообщения на сервер, сознания и удаления контакта.</p>
+</dd>
+<dt>client_side. <strong>generate_hash2</strong> (pass_to_hash)</dt><dd><p>Функция генерации хэша пароля с использованием алгоритма шифрования SHA512.
+Возвращает сформированный хэш.</p>
+</dd>
+</dl>
+</section>
+<section id="clmeta-py">
+<h2>Скрипт clmeta.py<a class="headerlink" href="#clmeta-py" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="cl-chat-ui-py">
+<h2>Скрипт cl_chat_ui.py<a class="headerlink" href="#cl-chat-ui-py" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="cl-db-py">
+<h2>Скрипт cl_db.py<a class="headerlink" href="#cl-db-py" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">AcyncChatProject</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="logger.html">Пакет Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testmass.html">Модуль TestMassConnection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messutils.html">Пакет MessageUtils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servsidescripts.html">Набор вспомогательных скриптов сервера</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Набор вспомогательных скриптов клиентов</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-side-py">client_side.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clmeta-py">Скрипт clmeta.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cl-chat-ui-py">Скрипт cl_chat_ui.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cl-db-py">Скрипт cl_db.py</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="servsidescripts.html" title="предыдущая глава">Набор вспомогательных скриптов сервера</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Ssergo99.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/clsidescripts.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
