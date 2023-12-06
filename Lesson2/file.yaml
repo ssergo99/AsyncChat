@@ -1,9 +1,0 @@
-products:
-- iPhone 14
-- iPhone SE
-- iPhone 14 Pro Max
-products_price:
-  iPhone 14: 900€
-  iPhone 14 Pro Max: 1300€
-  iPhone SE: 600€
-products_qty: 3
